@@ -10,6 +10,10 @@
 <!-- 文面の正は pagealbum リポジトリの docs/legal/privacy.md。変えるときはそちらを先に直す。 -->
 <main>
 <nav class="lang"><a href="#ja">日本語</a><a href="#en">English</a></nav>
+<script>
+// 言語の指定（#ja / #en）が無く、ブラウザの言語が日本語でなければ、英語の部分を開く
+if (!location.hash && !/^ja\b/i.test(navigator.language || '')) location.replace('#en');
+</script>
 
 <section id="ja" lang="ja">
 <h1>PageAlbum プライバシーポリシー</h1>
